@@ -1,7 +1,17 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
+import { Coffee } from '../../coffee/entities/coffee.entity';
 
 @ObjectType()
 export class Order {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  @Field(() => Int)
+  id: number;
+
+  @Field(() => Int)
+  quantity: number;
+
+  @Field()
+  status: string;
+
+  @Field(() => Coffee)
+  coffee: Coffee;
 }
