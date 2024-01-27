@@ -26,9 +26,10 @@
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/platform-fastify": "^10.3.1",
     "@prisma/client": "^5.8.1",
+    "dataloader": "^2.2.2",
     "graphql": "^16.8.1",
     "prisma": "^5.8.1",
-    "reflect-metadata": "^0.1.13",
+    "reflect-metadata": "^0.1.14",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
