@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order (e2e) creates a new order 1`] = `
+Object {
+  "body": Object {
+    "kind": "single",
+    "singleResult": Object {
+      "data": Object {
+        "createOrder": Object {
+          "coffee": Object {
+            "id": 1,
+            "name": "Cappucino",
+          },
+          "id": Any<Number>,
+          "quantity": 5,
+          "status": "Done",
+        },
+      },
+      "errors": undefined,
+    },
+  },
+  "http": Object {
+    "headers": Map {
+      "cache-control" => "no-store",
+    },
+    "status": undefined,
+  },
+}
+`;
+
+exports[`Order (e2e) finds all orders 1`] = `
+Object {
+  "body": Object {
+    "kind": "single",
+    "singleResult": Object {
+      "data": Object {
+        "findAllOrders": Array [
+          Object {
+            "coffee": Object {
+              "id": 1,
+              "name": "Cappucino",
+            },
+            "id": 1,
+            "quantity": 2,
+            "status": "InProgress",
+          },
+          Object {
+            "coffee": Object {
+              "id": 1,
+              "name": "Cappucino",
+            },
+            "id": 2,
+            "quantity": 1,
+            "status": "Done",
+          },
+        ],
+      },
+      "errors": undefined,
+    },
+  },
+  "http": Object {
+    "headers": Map {
+      "cache-control" => "no-store",
+    },
+    "status": undefined,
+  },
+}
+`;

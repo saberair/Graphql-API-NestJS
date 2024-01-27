@@ -18,12 +18,12 @@ export class CoffeeResolver {
     return this.coffeeService.create(createCoffeeInput);
   }
 
-  @Query(() => [Coffee], { name: 'coffee' })
+  @Query(() => [Coffee])
   findAllCoffees() {
     return this.coffeeService.findAll();
   }
 
-  @Query(() => Coffee, { name: 'coffee' })
+  @Query(() => Coffee)
   findOneCoffee(@Args('id', { type: () => Int }) id: number) {
     return this.coffeeService.findOne(id);
   }

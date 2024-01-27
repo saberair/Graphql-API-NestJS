@@ -17,8 +17,9 @@ type Order {
 }
 
 type Query {
-  coffee(id: Int!): Coffee!
-  order: [Order!]!
+  findAllCoffees: [Coffee!]!
+  findOneCoffee(id: Int!): Coffee!
+  findAllOrders: [Order!]!
 }
 
 type Mutation {

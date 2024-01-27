@@ -25,7 +25,7 @@ export class OrderResolver {
     return this.orderService.create(createOrderInput);
   }
 
-  @Query(() => [Order], { name: 'order' })
+  @Query(() => [Order])
   findAllOrders() {
     return this.orderService.findAll();
   }
