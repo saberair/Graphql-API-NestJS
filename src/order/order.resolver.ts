@@ -9,7 +9,7 @@ import {
 import { OrderService } from './order.service';
 import { Order } from './entities/order.entity';
 import { CreateOrderInput } from './dto/create-order.input';
-import { Coffee } from '../../src/coffee/entities/coffee.entity';
+import { Coffee } from '../coffee/entities/coffee.entity';
 import { Order as OrderModel, Coffee as CoffeeModel } from '@prisma/client';
 import { CoffeeDataLoader } from '../coffee/coffee.dataloader';
 

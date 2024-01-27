@@ -4,6 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { CoffeeModule } from './coffee/coffee.module';
 import { OrderModule } from './order/order.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { PrismaModule } from './prisma/prisma.module';
     CoffeeModule,
     OrderModule,
     PrismaModule,
+    AuthModule,
   ],
 })
 export class AppModule {}

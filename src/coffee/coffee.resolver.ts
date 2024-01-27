@@ -3,8 +3,11 @@ import { CoffeeService } from './coffee.service';
 import { Coffee } from './entities/coffee.entity';
 import { CreateCoffeeInput } from './dto/create-coffee.input';
 import { UpdateCoffeeInput } from './dto/update-coffee.input';
+import { Role } from '../prisma/types';
+import { ROLE } from '../auth/decorators/role.decorator';
 
 @Resolver(() => Coffee)
+@ROLE(Role.ADMIN)
 export class CoffeeResolver {
   constructor(private readonly coffeeService: CoffeeService) {}
 
