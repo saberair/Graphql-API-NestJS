@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#  Generate a sql migration
-npx prisma migrate dev --name init
+#  Migrate schema
+npx prisma migrate dev
 
 # Generate Prisma client
 npx prisma generate

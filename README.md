@@ -15,6 +15,10 @@ docker-compose up -d
 ####
 
 
+##### test the api using graphql playgroud: "http://localhost:5000/graphql"
+## generate client access token ( you can change the role to be ADMIN or CUSTOMER)
+curl -X POST http://localhost:5000/auth/login -d '{"email": "john@gmail.com", "password": "changeme", "role": "ADMIN"}' -H "Content-Type: application/json"
+
 
 
 # Running Tests
