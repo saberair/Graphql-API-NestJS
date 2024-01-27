@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { OrderResolver } from '../../src/order/order.resolver';
 import { OrderService } from '../../src/order/order.service';
+import { CoffeeService } from '../../src/coffee/coffee.service';
+import { PrismaService } from '../../src/prisma/prisma.service';
 import { CreateOrderInput } from '../../src/order/dto/create-order.input';
 
 const baseOrder: CreateOrderInput = {
@@ -17,6 +19,8 @@ describe('OrderResolver', () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         OrderResolver,
+        CoffeeService,
+        PrismaService,
         {
           provide: OrderService,
           useValue: {
