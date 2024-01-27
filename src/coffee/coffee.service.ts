@@ -16,7 +16,7 @@ export class CoffeeService {
     return `This action returns a #${id} coffee`;
   }
 
-  update(id: number, updateCoffeeInput: UpdateCoffeeInput) {
+  update(updateCoffeeInput: UpdateCoffeeInput) {
     return `This action updates a #${id} coffee`;
   }
 

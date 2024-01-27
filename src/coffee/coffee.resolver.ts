@@ -9,23 +9,27 @@ export class CoffeeResolver {
   constructor(private readonly coffeeService: CoffeeService) {}
 
   @Mutation(() => Coffee)
-  createCoffee(@Args('createCoffeeInput') createCoffeeInput: CreateCoffeeInput) {
+  createCoffee(
+    @Args('createCoffeeInput') createCoffeeInput: CreateCoffeeInput,
+  ) {
     return this.coffeeService.create(createCoffeeInput);
   }
 
   @Query(() => [Coffee], { name: 'coffee' })
-  findAll() {
+  findAllCoffees() {
     return this.coffeeService.findAll();
   }
 
   @Query(() => Coffee, { name: 'coffee' })
-  findOne(@Args('id', { type: () => Int }) id: number) {
+  findOneCoffee(@Args('id', { type: () => Int }) id: number) {
     return this.coffeeService.findOne(id);
   }
 
   @Mutation(() => Coffee)
-  updateCoffee(@Args('updateCoffeeInput') updateCoffeeInput: UpdateCoffeeInput) {
-    return this.coffeeService.update(updateCoffeeInput.id, updateCoffeeInput);
+  updateCoffee(
+    @Args('updateCoffeeInput') updateCoffeeInput: UpdateCoffeeInput,
+  ) {
+    return this.coffeeService.update(updateCoffeeInput);
   }
 
   @Mutation(() => Coffee)
