@@ -34,12 +34,14 @@ Object {
         "findAllCoffees": Array [
           Object {
             "id": 1,
+            "inventoryCount": 40,
             "name": "Cappucino",
             "price": 4,
             "size": "Big",
           },
           Object {
             "id": 2,
+            "inventoryCount": 30,
             "name": "Expresso",
             "price": 3,
             "size": "Small",
@@ -66,6 +68,7 @@ Object {
       "data": Object {
         "findOneCoffee": Object {
           "id": 1,
+          "inventoryCount": 40,
           "name": "Cappucino",
           "price": 4,
           "size": "Big",
@@ -91,6 +94,7 @@ Object {
       "data": Object {
         "removeCoffee": Object {
           "id": 2,
+          "inventoryCount": 30,
           "name": "Expresso",
           "price": 3,
           "size": "Small",
@@ -116,6 +120,7 @@ Object {
       "data": Object {
         "updateCoffee": Object {
           "id": 1,
+          "inventoryCount": 40,
           "name": "Express",
           "price": 4,
           "size": "Small",

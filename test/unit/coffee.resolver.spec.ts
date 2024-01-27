@@ -9,6 +9,7 @@ const baseCoffee: CreateCoffeeInput = {
   name: 'Cappucino',
   price: 4,
   size: 'big',
+  inventoryCount: 50,
 };
 
 describe('CoffeeResolver', () => {

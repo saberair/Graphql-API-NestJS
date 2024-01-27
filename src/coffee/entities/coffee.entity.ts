@@ -13,4 +13,7 @@ export class Coffee {
 
   @Field()
   size: string;
+
+  @Field(() => Int)
+  inventoryCount: number;
 }

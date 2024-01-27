@@ -30,6 +30,7 @@ describe('Order (e2e)', () => {
           coffee {
             id
             name
+            inventoryCount
           }
         }
       }
@@ -69,6 +70,7 @@ describe('Order (e2e)', () => {
           coffee {
             id
             name
+            inventoryCount
           }
         }
       }

@@ -10,6 +10,7 @@ const baseCoffee: Coffee = {
   name: 'Cappucino',
   price: 4,
   size: 'big',
+  inventoryCount: 40,
 };
 
 describe('CoffeeService', () => {

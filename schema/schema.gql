@@ -7,6 +7,7 @@ type Coffee {
   name: String!
   price: Float!
   size: String!
+  inventoryCount: Int!
 }
 
 type Order {
@@ -33,12 +34,14 @@ input CreateCoffeeInput {
   name: String!
   price: Float!
   size: String!
+  inventoryCount: Int!
 }
 
 input UpdateCoffeeInput {
   name: String
   price: Float
   size: String
+  inventoryCount: Int
   id: Int!
 }
 

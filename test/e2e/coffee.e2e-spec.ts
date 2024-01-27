@@ -37,6 +37,7 @@ describe('Coffee (e2e)', () => {
       name: 'Express',
       price: 3,
       size: 'Big',
+      inventoryCount: 60,
     };
 
     const response = await apolloServer.executeOperation({
@@ -65,6 +66,7 @@ describe('Coffee (e2e)', () => {
           name
           price
           size
+          inventoryCount
         }
       }
     `;
@@ -92,6 +94,7 @@ describe('Coffee (e2e)', () => {
           name
           price
           size
+          inventoryCount
         }
       }
     `;
@@ -112,6 +115,7 @@ describe('Coffee (e2e)', () => {
           name
           price
           size
+          inventoryCount
         }
       }
     `;
@@ -131,6 +135,7 @@ describe('Coffee (e2e)', () => {
           name
           price
           size
+          inventoryCount
         }
       }
     `;

@@ -1,4 +1,4 @@
-import { InputType, Field, Float } from '@nestjs/graphql';
+import { InputType, Field, Float, Int } from '@nestjs/graphql';
 
 @InputType()
 export class CreateCoffeeInput {
@@ -10,4 +10,7 @@ export class CreateCoffeeInput {
 
   @Field()
   size: string;
+
+  @Field(() => Int)
+  inventoryCount: number;
 }

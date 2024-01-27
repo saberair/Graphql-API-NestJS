@@ -9,6 +9,7 @@ Object {
         "createOrder": Object {
           "coffee": Object {
             "id": 1,
+            "inventoryCount": 35,
             "name": "Cappucino",
           },
           "id": Any<Number>,
@@ -38,6 +39,7 @@ Object {
           Object {
             "coffee": Object {
               "id": 1,
+              "inventoryCount": 35,
               "name": "Cappucino",
             },
             "id": 1,
@@ -47,6 +49,7 @@ Object {
           Object {
             "coffee": Object {
               "id": 1,
+              "inventoryCount": 35,
               "name": "Cappucino",
             },
             "id": 2,

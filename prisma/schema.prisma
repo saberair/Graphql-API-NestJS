@@ -15,6 +15,7 @@ model Coffee {
   name  String
   price Float
   size  String
+  inventoryCount Int
   orders Order[]
 }
 

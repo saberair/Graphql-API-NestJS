@@ -73,8 +73,8 @@ async function seedDataBase(prismaService: PrismaService) {
 
   await prismaService.coffee.createMany({
     data: [
-      { name: 'Cappucino', price: 4, size: 'Big' },
-      { name: 'Expresso', price: 3, size: 'Small' },
+      { name: 'Cappucino', price: 4, size: 'Big', inventoryCount: 40 },
+      { name: 'Expresso', price: 3, size: 'Small', inventoryCount: 30 },
     ],
   });
 
