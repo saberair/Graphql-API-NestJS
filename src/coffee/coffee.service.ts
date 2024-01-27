@@ -1,26 +1,58 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCoffeeInput } from './dto/create-coffee.input';
 import { UpdateCoffeeInput } from './dto/update-coffee.input';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class CoffeeService {
-  create(createCoffeeInput: CreateCoffeeInput) {
-    return 'This action adds a new coffee';
+  constructor(private prisma: PrismaService) {}
+  /**
+   *
+   * @returns all coffees
+   */
+  async findAll() {
+    return this.prisma.coffee.findMany();
   }
 
-  findAll() {
-    return `This action returns all coffee`;
+  /**
+   *
+   * @param id a coffee ID
+   * @returns a found coffee
+   */
+  async findOne(id: number) {
+    return this.prisma.coffee.findUnique({ where: { id } });
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} coffee`;
+  /**
+   *
+   * @param createCoffeeInput the new coffee input
+   * @returns the created coffee
+   */
+  async create(createCoffeeInput: CreateCoffeeInput) {
+    return this.prisma.coffee.create({
+      data: createCoffeeInput,
+    });
   }
 
+  /**
+   *
+   * @param updateCoffeeInput the updated coffee fields
+   * @returns the updated coffee
+   */
   update(updateCoffeeInput: UpdateCoffeeInput) {
-    return `This action updates a #${id} coffee`;
+    const { id, ...rest } = updateCoffeeInput;
+    return this.prisma.coffee.update({
+      where: { id },
+      data: rest,
+    });
   }
 
+  /**
+   *
+   * @param id the id of the coffee to remove
+   * @returns the removed coffee
+   */
   remove(id: number) {
-    return `This action removes a #${id} coffee`;
+    return this.prisma.coffee.delete({ where: { id } });
   }
 }

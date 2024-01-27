@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { CoffeeResolver } from '../../src/coffee/coffee.resolver';
 import { CoffeeService } from '../../src/coffee/coffee.service';
 import { CreateCoffeeInput } from '../../src/coffee/dto/create-coffee.input';
-import { UpdateCoffeeInput } from 'src/coffee/dto/update-coffee.input';
+import { UpdateCoffeeInput } from '../../src/coffee/dto/update-coffee.input';
 
 const baseCoffee: CreateCoffeeInput = {
   name: 'Cappucino',
