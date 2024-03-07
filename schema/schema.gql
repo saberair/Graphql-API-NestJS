@@ -1,0 +1,52 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Coffee {
+  id: Int!
+  name: String!
+  price: Float!
+  size: String!
+  inventoryCount: Int!
+}
+
+type Order {
+  id: Int!
+  quantity: Int!
+  status: String!
+  coffee: Coffee!
+}
+
+type Query {
+  findAllCoffees: [Coffee!]!
+  findOneCoffee(id: Int!): Coffee!
+  findAllOrders: [Order!]!
+}
+
+type Mutation {
+  createCoffee(createCoffeeInput: CreateCoffeeInput!): Coffee!
+  updateCoffee(updateCoffeeInput: UpdateCoffeeInput!): Coffee!
+  removeCoffee(id: Int!): Coffee!
+  createOrder(createOrderInput: CreateOrderInput!): Order!
+}
+
+input CreateCoffeeInput {
+  name: String!
+  price: Float!
+  size: String!
+  inventoryCount: Int!
+}
+
+input UpdateCoffeeInput {
+  name: String
+  price: Float
+  size: String
+  inventoryCount: Int
+  id: Int!
+}
+
+input CreateOrderInput {
+  coffeeId: Int!
+  quantity: Int!
+  status: String!
+}

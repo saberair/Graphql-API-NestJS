@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coffee (e2e) creates a new coffee 1`] = `
+Object {
+  "body": Object {
+    "kind": "single",
+    "singleResult": Object {
+      "data": Object {
+        "createCoffee": Object {
+          "id": Any<Number>,
+          "name": "Express",
+          "price": 3,
+          "size": "Big",
+        },
+      },
+      "errors": undefined,
+    },
+  },
+  "http": Object {
+    "headers": Map {
+      "cache-control" => "no-store",
+    },
+    "status": undefined,
+  },
+}
+`;
+
+exports[`Coffee (e2e) finds all coffees 1`] = `
+Object {
+  "body": Object {
+    "kind": "single",
+    "singleResult": Object {
+      "data": Object {
+        "findAllCoffees": Array [
+          Object {
+            "id": 1,
+            "inventoryCount": 40,
+            "name": "Cappucino",
+            "price": 4,
+            "size": "Big",
+          },
+          Object {
+            "id": 2,
+            "inventoryCount": 30,
+            "name": "Expresso",
+            "price": 3,
+            "size": "Small",
+          },
+        ],
+      },
+      "errors": undefined,
+    },
+  },
+  "http": Object {
+    "headers": Map {
+      "cache-control" => "no-store",
+    },
+    "status": undefined,
+  },
+}
+`;
+
+exports[`Coffee (e2e) finds one coffee 1`] = `
+Object {
+  "body": Object {
+    "kind": "single",
+    "singleResult": Object {
+      "data": Object {
+        "findOneCoffee": Object {
+          "id": 1,
+          "inventoryCount": 40,
+          "name": "Cappucino",
+          "price": 4,
+          "size": "Big",
+        },
+      },
+      "errors": undefined,
+    },
+  },
+  "http": Object {
+    "headers": Map {
+      "cache-control" => "no-store",
+    },
+    "status": undefined,
+  },
+}
+`;
+
+exports[`Coffee (e2e) removes a coffee 1`] = `
+Object {
+  "body": Object {
+    "kind": "single",
+    "singleResult": Object {
+      "data": Object {
+        "removeCoffee": Object {
+          "id": 2,
+          "inventoryCount": 30,
+          "name": "Expresso",
+          "price": 3,
+          "size": "Small",
+        },
+      },
+      "errors": undefined,
+    },
+  },
+  "http": Object {
+    "headers": Map {
+      "cache-control" => "no-store",
+    },
+    "status": undefined,
+  },
+}
+`;
+
+exports[`Coffee (e2e) updates coffee 1`] = `
+Object {
+  "body": Object {
+    "kind": "single",
+    "singleResult": Object {
+      "data": Object {
+        "updateCoffee": Object {
+          "id": 1,
+          "inventoryCount": 40,
+          "name": "Express",
+          "price": 4,
+          "size": "Small",
+        },
+      },
+      "errors": undefined,
+    },
+  },
+  "http": Object {
+    "headers": Map {
+      "cache-control" => "no-store",
+    },
+    "status": undefined,
+  },
+}
+`;
