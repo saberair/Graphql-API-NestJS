@@ -1,4 +1,4 @@
-# stationf-technical-test-back-saber
+# Graphql-API-NestJS
 ## Usage
 
 # Here's how to run the project (generate javascript files on a lib directory that can be used by other components):
